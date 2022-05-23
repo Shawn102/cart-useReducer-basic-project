@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=McLaren&family=Quintessential&display=swap");
+*{
+  margin: 0%;
+  box-sizing: border-box;
+}
+:root{
+  --font-Quintessential: "Quintessential";
+  --font-McLaren: "McLaren";
+  --smooth-transition: all 0.3s ease;
+  --long-transition: all 0.4s ease;
+  --color-gold: goldenrod;
+}
+body{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgb(1, 160, 147);
+}
+.nav-text{
+  color: white;
+  font-family: var(--font-Quintessential);
+}
+.pos-nav-btn{
+  position: relative;
+  padding: 10px 5px;
+}
+.react-icon-btn{
+  font-size: 35px;
+  display: inline-flex;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.btn-amount{
+  position: absolute;
+  top: 0px;
+  left: 60%;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 12.5px;
+  color: red;
+  cursor: pointer;
+}
+/* Loading effect */
+.grid-loading{
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+.loading-h3{
+  font-family: var(--font-Quintessential);
+  text-align: center;
+  color: rgb(104, 14, 189);
+  font-size: 30px;
+  animation: ani-loading 3s ease 1s infinite;
+  transform: scale(1.5);
+  text-shadow: 10px 5px 5px silver;
+}
+@keyframes ani-loading {
+  10%{
+    transform: scale(0)
+  }
+  25%{
+    transform: scale(0.5) translateY(300px); 
+    opacity: 0;
+    text-shadow: 50px 30px 5px rgb(88, 88, 88);
+  }
+  50%{
+    transform: scale(1.1);
+    text-shadow: -20px -10px 1px rgb(59, 59, 59);
+    color: red;
+  }
+  75%{
+    transform: scale(1);
+    text-shadow: 10px -20px 5px rgb(112, 112, 112);
+    color: red;
+  }
+  85%{
+    opacity: 0.5;
+  }
+}
+.proload-gif-image{
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  height: 250px;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+header{
+  text-align: center;
+  margin: 50px 0;
+  font-family: var(--font-McLaren);
+  color: rgb(24, 187, 133);
+}
+.underline{
+  width: 100px;
+  height: 5px;
+  background: rgb(24, 187, 133);
+  margin: 5px auto;
+  border-radius: 5px;
+}
+/* main style */
+.section-cart{
+  padding: 0 20px;
+}
+main{
+  /* background: rgb(194, 194, 194); */
+  height: fit-content;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.article{
+  padding: 10px 0;
+}
+.img-flex{
+  display: flex;
+  text-transform: capitalize;
+  font-family: var(--font-McLaren);
+}
+.img-cart{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+.img-text-flex{
+  padding-left: 50px;
+}
+.button-container{
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  margin-left: 130px;
+  /* margin: 10px 0; */
+}
+.btn-add-remove{
+  display: flex;
+  font-size: 25px;
+  background: white;
+  border-radius: 5px;
+  color: var(--color-gold);
+  border: 2px solid var(--color-gold);
+  cursor: pointer;
+}
+.price{
+  color: rgb(58, 194, 148);
+  padding: 5px 0;
+}
+.remove-btn{
+  color: rgb(1, 199, 199);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0 0 -5px;
+}
+/* footer */
+footer{
+  width: 100%;
+  max-width: 710px;
+  margin: 0 auto;
+}
+p{
+  margin: 5px;
+  font-size: 20px;
+}
+.total-footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-family: var(--font-Quintessential);
+  color: var(--color-gold);
+}
+.btn-clr{
+  display: flex;
+  justify-content: center;
+}
+.btn-clear-cart{
+  color: red;
+  border: 2px solid red;
+  background: transparent;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+/* empty-list-style */
+.empty-list-style{
+  color: rgb(42, 182, 135);
+  text-align: center;
+}
+.reload-btn{
+  margin: 5px 0;
+  color: rgb(44, 187, 139);
+  border: 2px solid rgb(44, 187, 139);
+}
+@media screen and (min-width: 768px) {
+  .article{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  .button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-add-remove{
+    background: transparent;
+    color: var(--color-gold);
+    border: none;
+  }
+}
+@media screen and (max-width: 250px) {
+  .button-container{
+    display: block;
+  }
+  
+} 
